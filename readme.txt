@@ -11,3 +11,5 @@ cut -b=1
 cut -c = 1,3,5
 
 cat user.txt | awk'{print $1}'
+
+sed '1 s/''/ /' user.txt
