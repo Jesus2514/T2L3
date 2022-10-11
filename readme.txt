@@ -9,3 +9,5 @@ awk ' ´{print $11 ":" print $20}'
 cut -b=1
 
 cut -c = 1,3,5
+
+cat user.txt | awk'{print $1}'
