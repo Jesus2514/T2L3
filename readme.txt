@@ -18,3 +18,5 @@ cut -c = 1,3,5
 cat user.txt | grep -v ^[#,_]
 
 sort -r user.txt 
+
+sort -r user.txt
