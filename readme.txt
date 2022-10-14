@@ -14,11 +14,11 @@ cat user.txt |sed 's/:/ /'|  awk '{print $1}' | grep -v ^#
 
 cat user.txt |sed 's/:/ /'|  cut -d: -f1 | grep -v ^[#,_]
 
-cat user.txt |sed 's/:/ /'|  cut -d: -f3 | grep -v ^#
+cat user.txt |sed 's/:/ /'| grep -v ^[#,_] | cut -d: -f3 
 
-
-cat user.txt | grep -v ^[#,_]
+cat user.txt | sort -rn
 
 sort -r user.txt 
+
 
 sort -r user.txt
