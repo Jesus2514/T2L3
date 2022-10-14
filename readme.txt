@@ -1,19 +1,21 @@
-head -10 user.txt
+head -n10 user.txt
 
-tail -5 user.txt
+tail -n5 user.txt
 
-awk ' ´{print $11 ":" print $121}'
+tail -n +11 user.txt
 
-awk ' ´{print $11 ":" print $20}'
+tail -n+11 user.txt | head -n10
 
-cut -b=1
+cut -b1 user.txt
 
-cut -c = 1,3,5
+cut -b1,3,5 user.txt
 
-cat user.txt | awk'{print $1}'
+cat user.txt |sed 's/:/ /'|  awk '{print $1}' | grep -v ^#
 
-sed '1 s/''/ /' user.txt
-cut -c = 1,3,5
+cat user.txt |sed 's/:/ /'|  cut -d: -f1 | grep -v ^[#,_]
+
+cat user.txt |sed 's/:/ /'|  cut -d: -f3 | grep -v ^#
+
 
 cat user.txt | grep -v ^[#,_]
 
