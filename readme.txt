@@ -21,6 +21,13 @@ cat -n user.txt | sort -rn
 cat user.txt | grep -v ^# | sort -t: -k3 -n 
 
 
+cat user.txt |sed 's/:/ /'| grep -v ^#|  cut -d: -f4 | sort -n 
+
+cat user.txt  | grep -v ^#| cut -d: -f2,3 | sed 's/:/-/'
+
+cat user.txt  | grep -v ^#| cut -d: -f1,6 | sed 's/:/#/'
+
+
 
 
 
